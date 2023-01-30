@@ -14,9 +14,14 @@ html {
  * Global layout stuff
  */
 
+nav {
+  font-family: 'Bungee', cursive;
+}
+
 body {
   color: #545149;
   background-color: #f4f1ec;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
 }
 
