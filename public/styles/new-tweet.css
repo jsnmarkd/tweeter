@@ -34,3 +34,7 @@
 .new-tweet-footer .counter {
   font-family: 'Bungee', cursive;
 }
+
+.new-tweet-footer .red {
+  color: red;
+}
