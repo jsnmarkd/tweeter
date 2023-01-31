@@ -25,3 +25,12 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ main {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  background-color: #dae7f5;
+  flex-direction: column;
+  justify-content: center;
+ }
