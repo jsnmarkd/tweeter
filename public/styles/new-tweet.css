@@ -1,0 +1,32 @@
+
+form {
+  display: flex;
+  margin: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  flex-direction: column;
+}
+
+textarea {
+  outline: 0;
+  height: 0;
+  padding-top: 1em;
+  background-color: #dae7f5;
+  border-width: 0 0 4px;
+}
+
+.new-tweet-footer {
+  padding-top: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  color: #FFFFFF;
+  background-color: #4056A1;
+  font-family: 'Bungee', cursive;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;
+}
