@@ -1,4 +1,3 @@
-
 form {
   display: flex;
   margin: auto;
@@ -8,15 +7,20 @@ form {
 }
 
 textarea {
+  background-color: #dae7f5;
   outline: 0;
   height: 0;
-  padding-top: 1em;
-  background-color: #dae7f5;
+  padding: 1.7em;
+  padding-left: 0em;
   border-width: 0 0 4px;
 }
 
+textarea::placeholder {
+  font-weight: bold;
+}
+
 .new-tweet-footer {
-  padding-top: 1em;
+  padding: 1em;
   display: flex;
   justify-content: space-between;
 }
