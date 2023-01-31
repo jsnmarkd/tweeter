@@ -1,4 +1,4 @@
-form {
+.new-tweet form {
   display: flex;
   margin: auto;
   padding-left: 1em;
@@ -6,7 +6,7 @@ form {
   flex-direction: column;
 }
 
-textarea {
+.new-tweet textarea {
   background-color: #dae7f5;
   outline: 0;
   height: 0;
@@ -15,7 +15,7 @@ textarea {
   border-width: 0 0 4px;
 }
 
-textarea::placeholder {
+.new-tweet textarea::placeholder {
   font-weight: bold;
 }
 
@@ -25,12 +25,12 @@ textarea::placeholder {
   justify-content: space-between;
 }
 
-button {
+.new-tweet-footer button {
   color: #FFFFFF;
   background-color: #4056A1;
   font-family: 'Bungee', cursive;
 }
 
-.counter {
+.new-tweet-footer .counter {
   font-family: 'Bungee', cursive;
 }
