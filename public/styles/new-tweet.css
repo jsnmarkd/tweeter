@@ -15,7 +15,7 @@
   border-width: 0 0 4px;
 }
 
-.new-tweet textarea::placeholder {
+.new-tweet textarea {
   font-weight: bold;
 }
 

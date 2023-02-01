@@ -1,0 +1,47 @@
+article.tweet {
+  border: solid 3px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+article.tweet:hover {
+  box-shadow: 0 0 15px rgba(2, 67, 67, 0.8);
+}
+
+article.tweet header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+}
+
+article.tweet header .fa-user {
+  width: 30px;
+  height: 30px;
+}
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5%;
+  padding: 0.2em;
+  border-top: solid 3px;
+  font-size: 15px;
+}
+
+article.tweet .user-tag {
+  opacity: 50%;
+}
+
+article.tweet p {
+  padding: 0.5em;
+}
+
+article.tweet .fa-solid {
+  padding-left: 10px;
+}
+
+article.tweet .fa-solid:hover {
+  color:rgb(255, 70, 70);
+}

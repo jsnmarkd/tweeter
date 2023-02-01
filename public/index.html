@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -38,7 +39,7 @@
       </div>
     </nav>
 
-    <header>
+    <header class="nav-bar">
       <div>
         <img src="/images/profile-hex.png">
       </div>
@@ -52,7 +53,6 @@
       <section class="new-tweet">
         <!-- <h2>Compose Tweet</h2> -->
         <form action="/tweets" method="POST">
-          <!-- <label for="tweet-text"><strong>What are you humming about?</strong></label> -->
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="new-tweet-footer">
             <button type="submit">Tweet</button>
@@ -60,6 +60,24 @@
           </div>
         </form>
       </section>
+      <article class="tweet">
+        <header>
+          <div>
+            <i class="fa-solid fa-user"></i>
+            Name
+          </div>
+          <span class="user-tag">@userTag</span>
+        </header>
+        <p>Some Content!</p>
+        <footer>
+          <span>10 days ago</span>
+          <div>
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-share"></i>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </footer>
+      </article>
     </main>
   </body>
 </html>

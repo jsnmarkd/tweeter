@@ -12,11 +12,11 @@ nav {
   position: fixed;
 }
 
-.fa-solid {
+nav .fa-solid {
  color: red;
 }
 
-.nav-top-right {
+nav .nav-top-right {
   display: flex;
   align-items: center;
   flex-direction: column;

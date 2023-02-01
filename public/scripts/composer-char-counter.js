@@ -7,5 +7,4 @@ $(document).ready(function() {
     $(".new-tweet-footer .counter:contains('')").removeClass('red');
     $(".new-tweet-footer .counter:contains('-')").addClass('red');
   });
-  
 });
