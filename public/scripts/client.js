@@ -33,21 +33,27 @@ const data = [
 ]
 
 /**
- * Below when I append, I use the shorthand for $( document ).ready()
- * So that it renders the tweets once the document is ready
+ * Appends a tweet
+ * @param {Array} tweets - Array of user data
  */
 
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    $(() => {
-      $('#tweets-container').append($tweet);
-    });
+    $('#tweets-container').append($tweet);
   }
 }
 
+/**
+ * Creates a Tweet element
+ * @constructor
+ * @param {Object} tweetObject - User data and contents of the tweet
+ * @returns {HTMLElement} $tweet
+ */
+
 const createTweetElement = tweetObject => {
-  let $tweet = `
+  let $tweet = 
+  `
     <article class="tweet">
       <header>
         <div class="user-tweet">
@@ -70,4 +76,20 @@ const createTweetElement = tweetObject => {
   return $tweet;
 };
 
-renderTweets(data);
+/** 
+ * $( document ).ready()
+ * @function renderTweets - calls function to render data
+ * 
+ * AJAX POST request
+ */
+
+$(() => {
+
+  renderTweets(data);
+
+  $("#post-tweet").on('submit', event => {
+    event.preventDefault();
+    $.post("/tweets", $("#tweet-text").serialize());
+  });
+
+})
