@@ -35,6 +35,7 @@
 
 .new-tweet-footer button:hover {
   box-shadow: 3px 3px 3px 0px rgba(2, 67, 67, 1);
+  transform: scale(1.01);
 }
 
 .new-tweet-footer .counter {
