@@ -12,6 +12,8 @@
   height: 0;
   padding: 1.7em;
   padding-left: 0em;
+  resize: none;
+  overflow: hidden;
   border-width: 0 0 4px;
 }
 
@@ -29,6 +31,10 @@
   color: #FFFFFF;
   background-color: #4056A1;
   font-family: 'Bungee', cursive;
+}
+
+.new-tweet-footer button:hover {
+  box-shadow: 3px 3px 3px 0px rgba(2, 67, 67, 1);
 }
 
 .new-tweet-footer .counter {
