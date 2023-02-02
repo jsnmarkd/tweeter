@@ -63,7 +63,17 @@ $(() => {
 
   $("#post-tweet").on('submit', event => {
     event.preventDefault();
-    $.post("/tweets", $("#tweet-text").serialize());
+    const tweet = document.querySelector("#tweet-text");
+    const charCount = ($(tweet).val()).length;
+
+    if (charCount > 140) {
+      alert("Tweet exceeds character count!");
+    } else if (charCount === 0) {
+      alert("You are not tweeting anything!")
+    } else {
+      $.post("/tweets", $("#tweet-text").serialize());
+    }
+    
   });
 
   const loadTweets = () => {
