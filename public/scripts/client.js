@@ -73,21 +73,27 @@ const createTweetElement = tweetObject => {
  */
 
 $(() => {
+  
+  $("#error-char-count").hide();
 
   $("#post-tweet").on('submit', event => {
     event.preventDefault();
     const tweet = document.querySelector("#tweet-text");
     const charCount = ($(tweet).val()).length;
 
+
     if (charCount > 140) {
-      alert("Tweet exceeds character count!");
+      $("#error-char-count").slideDown("fast");
+      $("#error-char-message").text("Tweet exceeds character count!");
     } else if (charCount === 0) {
-      alert("You are not tweeting anything!")
+      $("#error-char-count").slideDown("fast");
+      $("#error-char-message").text("You did not tweet anything!");
     } else {
       $.post("/tweets", $("#tweet-text").serialize());
+      loadTweets();
       $("#tweet-text").val('');
       $(".counter").val(140);
-      loadTweets();
+      $("#error-char-count").hide("slow");
     }
     
   });

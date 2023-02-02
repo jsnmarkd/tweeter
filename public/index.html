@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/error-char-count.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
@@ -50,10 +50,17 @@
       </div>
     </header>
 
-    <!-- Page-specific (main) content here -->
     <main class="container">
+
+      <label id="error-char-count" for="error">
+        <div>
+          <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+          <p id="error-char-message"></p>
+          <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+        </div>
+      </label>
+
       <section class="new-tweet">
-        <!-- <h2>Compose Tweet</h2> -->
         <form id="post-tweet" action="/tweets" method="POST">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="new-tweet-footer">
@@ -62,8 +69,10 @@
           </div>
         </form>
       </section>
+
       <div id="tweets-container">
       </div>
+
     </main>
   </body>
 </html>

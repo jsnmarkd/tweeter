@@ -1,0 +1,14 @@
+#error-char-count {
+  font-weight: bolder;
+  color: red;
+  margin: 20px;
+  float: left;
+}
+
+#error-char-count div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 4px solid;
+}
+
