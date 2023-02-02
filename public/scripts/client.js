@@ -8,21 +8,22 @@
  */
 
 /**
- * Appends a tweet
- * @param {Array} tweets - Array of user data
+ * Prepends a tweet
+ * @param {array} tweets - Array of user data
  */
 
 const renderTweets = function(tweets) {
+  $("#tweets-container").empty();
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    $('#tweets-container').append($tweet);
+    $('#tweets-container').prepend($tweet);
   }
 }
 
 /**
  * Creates a Tweet element
  * @constructor
- * @param {Object} tweetObject - User data and contents of the tweet
+ * @param {object} tweetObject - User data and contents of the tweet
  * @returns {HTMLElement} $tweet
  */
 
@@ -56,7 +57,7 @@ const createTweetElement = tweetObject => {
  * 
  * AJAX POST request
  * 
- * Function loadTweets - AJAX GET request
+ * AJAX GET request
  */
 
 $(() => {
@@ -72,6 +73,9 @@ $(() => {
       alert("You are not tweeting anything!")
     } else {
       $.post("/tweets", $("#tweet-text").serialize());
+      $("#tweet-text").val('');
+      $(".counter").val(140);
+      loadTweets();
     }
     
   });
@@ -81,6 +85,6 @@ $(() => {
       renderTweets(data);
     })
   }
-
+  
   loadTweets();
 })
