@@ -21,6 +21,18 @@ const renderTweets = function(tweets) {
 }
 
 /**
+ * Cross-Site Scripting - XSS
+ * @param {string} str - Text area content
+ * @returns string
+ */
+
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+/**
  * Creates a Tweet element
  * @constructor
  * @param {object} tweetObject - User data and contents of the tweet
@@ -38,7 +50,7 @@ const createTweetElement = tweetObject => {
         </div>
         <span class="user-tag">${tweetObject.user.handle}</span>
       </header>
-      <p>${tweetObject.content.text}</p>
+      <p>${escape(tweetObject.content.text)}</p>
       <footer>
         <span>${timeago.format(tweetObject.created_at)}</span>
         <div>
