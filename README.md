@@ -6,8 +6,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Screenshot of Login page"]
-!["Screenshot of Register page"]
+!["Screenshot of Mobile view"](https://github.com/jsnmarkd/tweeter/blob/master/public/images/mobile-view.png)
+!["Screenshot of Desktop view"](https://github.com/jsnmarkd/tweeter/blob/master/public/images/desktop-view.png)
 
 ## Getting Started
 
