@@ -81,19 +81,18 @@ $(() => {
     const tweet = document.querySelector("#tweet-text");
     const charCount = ($(tweet).val()).length;
 
-
     if (charCount > 140) {
-      $("#error-char-count").slideDown("fast");
+      $("#error-char-count").show("fast");
       $("#error-char-message").text("Tweet exceeds character count!");
     } else if (charCount === 0) {
-      $("#error-char-count").slideDown("fast");
+      $("#error-char-count").show("fast");
       $("#error-char-message").text("You did not tweet anything!");
     } else {
       $.post("/tweets", $("#tweet-text").serialize());
-      loadTweets();
       $("#tweet-text").val('');
       $(".counter").val(140);
       $("#error-char-count").hide("slow");
+      loadTweets();
     }
     
   });

@@ -26,6 +26,7 @@ article.tweet header .user-tweet {
 article.tweet header img {
   margin-right: 0.5em;
 }
+
 article.tweet footer {
   display: flex;
   justify-content: space-between;
