@@ -36,7 +36,7 @@ const escape = function (str) {
  * Creates a Tweet element
  * @constructor
  * @param {object} tweetObject - User data and contents of the tweet
- * @returns {HTMLElement} $tweet
+ * @returns {HTMLElement} $tweet - Tweet element
  */
 
 const createTweetElement = tweetObject => {
@@ -68,6 +68,8 @@ const createTweetElement = tweetObject => {
  * DOM work - jQuery's document ready function
  * 
  * AJAX POST request
+ * IF counter exceeds 140 throw an error
+ * IF counter is 0 throw an error
  * 
  * AJAX GET request
  */
@@ -78,7 +80,7 @@ $(() => {
 
   $("#post-tweet").on('submit', event => {
     event.preventDefault();
-    const tweet = document.querySelector("#tweet-text");
+    const tweet = $("#tweet-text");
     const charCount = ($(tweet).val()).length;
 
     if (charCount > 140) {
