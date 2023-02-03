@@ -8,3 +8,24 @@ header.nav-bar {
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   color: #FFFFFF;
 }
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+
+  header.nav-bar {
+    margin: 2rem;
+    margin-top: 10rem;
+    border: 3px solid cornflowerblue;
+    width: 500px;
+    height: 400px;
+    padding: 0;
+  }
+
+  main {
+    margin-right: 2rem;
+    margin-top: 10rem;
+  }
+
+}
